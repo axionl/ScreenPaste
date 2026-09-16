@@ -81,7 +81,7 @@ public sealed class RecordingEditorWindow : Window
 
     // Per-tool settings (loaded from AppSettings, persisted back on export)
     private Color _textColor, _shapeColor, _lineColor;
-    private string _textFont = "Segoe UI";
+    private string _textFont = "Microsoft YaHei";
     private double _textSize = 24;
     private bool _textBold, _textItalic, _textStrike;
     private ShapeKind _shapeKind;
