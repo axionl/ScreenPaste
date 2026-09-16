@@ -34,7 +34,7 @@ public sealed class AppSettings
     public double MosaicStrength { get; set; } = 12;     // block size in px
 
     // ---- Text defaults ----
-    public string TextFont { get; set; } = "Segoe UI";
+    public string TextFont { get; set; } = "Microsoft YaHei";
     public double TextSize { get; set; } = 24;
     public string TextColor { get; set; } = "#FFFF3B30"; // red
     public bool TextBold { get; set; }

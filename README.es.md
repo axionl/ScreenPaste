@@ -2,7 +2,7 @@
 
 <a href='https://ko-fi.com/M6T122R1AH' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-[繁體中文](README.md) | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | **Español**
+[繁體中文](README.md) | [简体中文](README.zh-CN.md) | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | **Español**
 
 # ScreenPaste
 
@@ -49,7 +49,7 @@ Tras capturar, aparece una **barra de herramientas** junto al cursor (arrastrabl
 
 ### Más
 - Atajos globales (**F1** captura, **F2** grabación, ambos configurables) y arranque desde el icono de la **bandeja del sistema**
-- **Varios idiomas**: 繁體中文 / English / 日本語 / 한국어 / Français / Deutsch / Español (sigue el sistema por defecto)
+- **Varios idiomas**: 繁體中文 / 简体中文 / English / 日本語 / 한국어 / Français / Deutsch / Español (sigue el sistema por defecto)
 - Tema **claro / oscuro / según el sistema**, interfaz moderna con esquinas redondeadas y barras de título oscuras
 - **Ventana de ajustes** centralizada: idioma, atajos, tema, inicio automático, carpeta de guardado, formato / tasa de grabación (los campos de atajo se fijan pulsando la combinación)
 - **Inicio automático con Windows** (opcional)

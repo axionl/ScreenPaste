@@ -2,7 +2,7 @@
 
 <a href='https://ko-fi.com/M6T122R1AH' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-[繁體中文](README.md) | [English](README.en.md) | [日本語](README.ja.md) | **한국어** | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md)
+[繁體中文](README.md) | [简体中文](README.zh-CN.md) | [English](README.en.md) | [日本語](README.ja.md) | **한국어** | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md)
 
 # ScreenPaste
 
@@ -49,7 +49,7 @@
 
 ### 기타
 - 전역 단축키(**F1** 캡처, **F2** 녹화, 모두 사용자 지정 가능)와 **시스템 트레이** 아이콘에서 실행
-- **다국어 지원**: 繁體中文 / English / 日本語 / 한국어 / Français / Deutsch / Español(기본은 시스템 언어)
+- **다국어 지원**: 繁體中文 / 简体中文 / English / 日本語 / 한국어 / Français / Deutsch / Español(기본은 시스템 언어)
 - **라이트 / 다크 / 시스템 따르기** 테마. 모던한 라운드 UI와 다크 제목 표시줄
 - 통합 **설정 창**: 언어, 단축키, 테마, 시작 시 실행, 저장 폴더, 녹화 형식 / 프레임 속도(단축키 칸은 키 조합을 누르기만 하면 설정)
 - **Windows 시작 시 자동 실행**(선택)

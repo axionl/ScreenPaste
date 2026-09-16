@@ -2,7 +2,7 @@
 
 <a href='https://ko-fi.com/M6T122R1AH' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-[繁體中文](README.md) | [English](README.en.md) | **日本語** | [한국어](README.ko.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md)
+[繁體中文](README.md) | [简体中文](README.zh-CN.md) | [English](README.en.md) | **日本語** | [한국어](README.ko.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md)
 
 # ScreenPaste
 
@@ -49,7 +49,7 @@
 
 ### その他
 - グローバルホットキー（**F1** キャプチャ、**F2** 録画、いずれもカスタマイズ可能）と**システムトレイ**アイコンから起動
-- **多言語対応**：繁體中文 / English / 日本語 / 한국어 / Français / Deutsch / Español（既定はシステムに従う）
+- **多言語対応**：繁體中文 / 简体中文 / English / 日本語 / 한국어 / Français / Deutsch / Español（既定はシステムに従う）
 - **ライト / ダーク / システムに従う**テーマ。モダンな角丸 UI とダークタイトルバー
 - 一元化された**設定ウィンドウ**：言語、ホットキー、テーマ、自動起動、保存フォルダー、録画形式 / フレームレート（ホットキー欄はキーを押すだけで設定可能）
 - **Windows 起動時の自動実行**（任意）

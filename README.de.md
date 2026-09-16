@@ -2,7 +2,7 @@
 
 <a href='https://ko-fi.com/M6T122R1AH' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-[繁體中文](README.md) | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Français](README.fr.md) | **Deutsch** | [Español](README.es.md)
+[繁體中文](README.md) | [简体中文](README.zh-CN.md) | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Français](README.fr.md) | **Deutsch** | [Español](README.es.md)
 
 # ScreenPaste
 
@@ -49,7 +49,7 @@ Nach der Aufnahme erscheint neben dem Cursor eine **Symbol-Werkzeugleiste** (ver
 
 ### Sonstiges
 - Globale Hotkeys (**F1** Aufnahme, **F2** Aufzeichnung, beide konfigurierbar) und Start über das **Infobereich**-Symbol
-- **Mehrsprachig**: 繁體中文 / English / 日本語 / 한국어 / Français / Deutsch / Español (folgt standardmäßig dem System)
+- **Mehrsprachig**: 繁體中文 / 简体中文 / English / 日本語 / 한국어 / Français / Deutsch / Español (folgt standardmäßig dem System)
 - **Hell / Dunkel / System**-Design, moderne abgerundete Oberfläche und dunkle Titelleisten
 - Zentrales **Einstellungsfenster**: Sprache, Hotkeys, Design, Autostart, Speicherordner, Aufnahmeformat / Bildrate (Hotkey-Felder werden durch einfaches Drücken der Kombination gesetzt)
 - Optionaler **Autostart mit Windows**

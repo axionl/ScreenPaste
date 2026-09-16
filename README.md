@@ -2,7 +2,7 @@
 
 <a href='https://ko-fi.com/M6T122R1AH' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-**繁體中文** | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md)
+**繁體中文** | [简体中文](README.zh-CN.md) | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md)
 
 # ScreenPaste
 
@@ -49,7 +49,7 @@
 
 ### 其他
 - 全域熱鍵（截圖預設 **F1**、區域錄影預設 **F2**）與**系統匣**圖示啟動
-- **多國語言**：繁體中文 / English / 日本語 / 한국어 / Français / Deutsch / Español（預設跟隨系統）
+- **多國語言**：繁體中文 / 简体中文 / English / 日本語 / 한국어 / Français / Deutsch / Español（預設跟隨系統）
 - **淺色 / 深色 / 跟隨系統**主題
 - 集中式**設定視窗**：語言、熱鍵、主題、開機啟動、儲存資料夾（熱鍵欄位可直接按組合鍵設定）
 - 可設定**開機自動啟動**

@@ -19,7 +19,7 @@ internal static class TrayIconFactory
             using var back = new SolidBrush(Color.FromArgb(0x3D, 0xA9, 0xFC));
             g.FillEllipse(back, 1, 1, 30, 30);
 
-            using var font = new Font("Segoe UI", 15, FontStyle.Bold, GraphicsUnit.Pixel);
+            using var font = new Font("Microsoft YaHei", 15, FontStyle.Bold, GraphicsUnit.Pixel);
             using var fmt = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center };
             g.DrawString("S", font, Brushes.White, new RectangleF(0, 0, 32, 32), fmt);
         }

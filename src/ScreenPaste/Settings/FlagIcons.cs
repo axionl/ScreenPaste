@@ -28,6 +28,7 @@ public static class FlagIcons
             switch (code)
             {
                 case "tw": DrawTw(c); break;
+                case "cn": DrawCn(c); break;
                 case "us": DrawUs(c); break;
                 case "jp": DrawJp(c); break;
                 case "kr": DrawKr(c); break;
@@ -92,6 +93,12 @@ public static class FlagIcons
         Fill(c, new SKRect(0, 0, W, H), new SKColor(0xFE, 0x00, 0x00));      // red field
         Fill(c, new SKRect(0, 0, W / 2f, H / 2f), new SKColor(0x00, 0x00, 0x95)); // blue canton
         Circle(c, W / 4f, H / 4f, H * 0.16f, SKColors.White);               // white sun (simplified)
+    }
+
+    private static void DrawCn(SKCanvas c)
+    {
+        Fill(c, new SKRect(0, 0, W, H), new SKColor(0xDE, 0x29, 0x10));      // red field
+        Circle(c, W * 0.2f, H * 0.32f, H * 0.22f, new SKColor(0xFF, 0xDE, 0x00)); // large yellow star (simplified)
     }
 
     private static void DrawUs(SKCanvas c)

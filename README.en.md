@@ -2,7 +2,7 @@
 
 <a href='https://ko-fi.com/M6T122R1AH' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-[繁體中文](README.md) | **English** | [日本語](README.ja.md) | [한국어](README.ko.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md)
+[繁體中文](README.md) | [简体中文](README.zh-CN.md) | **English** | [日本語](README.ja.md) | [한국어](README.ko.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md)
 
 # ScreenPaste
 
@@ -49,7 +49,7 @@ After capturing, an **icon toolbar** pops up next to the cursor (draggable, and 
 
 ### More
 - Global hotkeys (**F1** capture, **F2** recording, both configurable) and launch from the **system tray** icon
-- **Multiple languages**: Traditional Chinese / English / 日本語 / 한국어 / Français / Deutsch / Español (follows the system by default)
+- **Multiple languages**: Traditional Chinese / Simplified Chinese / English / 日本語 / 한국어 / Français / Deutsch / Español (follows the system by default)
 - **Light / Dark / Follow system** theme, with a modern rounded UI and dark title bars
 - A centralized **Settings window**: language, hotkeys, theme, run at startup, save folder, recording format / frame rate (hotkey fields are set by simply pressing the combination)
 - Optional **run automatically at startup**

@@ -56,7 +56,7 @@ public partial class CaptureOverlayWindow : Window
     private Color _penColor, _hlColor;
 
     // Text-tool settings + state
-    private string _textFont = "Segoe UI";
+    private string _textFont = "Microsoft YaHei";
     private double _textSize = 24;
     private Color _textColor;
     private bool _textBold, _textItalic, _textStrike;

@@ -8,13 +8,14 @@ public readonly record struct LangOption(string Code, string Native, string Flag
 /// <summary>
 /// Lightweight string localization. Call <see cref="Init"/> once at startup (and again
 /// when the language changes), then use <see cref="T"/> to look up UI strings.
-/// Simplified Chinese is intentionally excluded.
+/// Simplified and Traditional Chinese are both available.
 /// </summary>
 public static class Loc
 {
     public static readonly LangOption[] Languages =
     {
         new("zh-Hant", "繁體中文", "tw"),
+        new("zh-Hans", "简体中文", "cn"),
         new("en", "English", "us"),
         new("ja", "日本語", "jp"),
         new("ko", "한국어", "kr"),
@@ -46,13 +47,13 @@ public static class Loc
         }
 
         var c = CultureInfo.CurrentUICulture;
-        // Traditional Chinese regions only; Simplified falls back to English.
+        // Chinese: map traditional regions to zh-Hant, everything else to zh-Hans.
         if (c.Name.StartsWith("zh", StringComparison.OrdinalIgnoreCase))
         {
             var n = c.Name.ToLowerInvariant();
             if (n.Contains("hant") || n.Contains("tw") || n.Contains("hk") || n.Contains("mo"))
                 return "zh-Hant";
-            return Fallback;
+            return "zh-Hans";
         }
         return Normalize(c.TwoLetterISOLanguageName);
     }
@@ -62,6 +63,16 @@ public static class Loc
         code = code.Trim();
         foreach (var l in Languages)
             if (l.Code.Equals(code, StringComparison.OrdinalIgnoreCase)) return l.Code;
+        // Script subtag wins over the generic two-letter match: "zh-Hans-CN" and
+        // "zh_CN" must not be captured by "zh-Hant" just because both start with "zh".
+        if (code.StartsWith("zh", StringComparison.OrdinalIgnoreCase))
+        {
+            var n = code.ToLowerInvariant();
+            if (n.Contains("hant") || n.EndsWith("-tw") || n.EndsWith("_tw") ||
+                n.EndsWith("-hk") || n.EndsWith("_hk") || n.EndsWith("-mo") || n.EndsWith("_mo"))
+                return "zh-Hant";
+            return "zh-Hans";
+        }
         // match by two-letter prefix (e.g. "ja-JP" -> "ja")
         var two = code.Length >= 2 ? code[..2].ToLowerInvariant() : code;
         foreach (var l in Languages)
@@ -88,6 +99,17 @@ public static class Loc
         {
             ["en"] = en, ["zh-Hant"] = zh, ["ja"] = ja, ["ko"] = ko, ["fr"] = fr, ["de"] = de, ["es"] = es,
         };
+
+    /// <summary>
+    /// Simplified Chinese for an existing entry, or a standalone entry when no other
+    /// language needs one. Keeping these in a second pass makes the traditional/English
+    /// table above readable while still giving every key a zh-Hans string.
+    /// </summary>
+    private static void Zh(string key, string zhHans)
+    {
+        if (Table.TryGetValue(key, out var langs)) langs["zh-Hans"] = zhHans;
+        else Table[key] = new Dictionary<string, string> { ["zh-Hans"] = zhHans };
+    }
 
     private static void Seed()
     {
@@ -249,5 +271,164 @@ public static class Loc
         Add("img.filter",    "Images (*.png;*.jpg;*.jpeg;*.webp)|*.png;*.jpg;*.jpeg;*.webp|All files (*.*)|*.*", "圖片 (*.png;*.jpg;*.jpeg;*.webp)|*.png;*.jpg;*.jpeg;*.webp|所有檔案 (*.*)|*.*", "画像 (*.png;*.jpg;*.jpeg;*.webp)|*.png;*.jpg;*.jpeg;*.webp|すべてのファイル (*.*)|*.*", "이미지 (*.png;*.jpg;*.jpeg;*.webp)|*.png;*.jpg;*.jpeg;*.webp|모든 파일 (*.*)|*.*", "Images (*.png;*.jpg;*.jpeg;*.webp)|*.png;*.jpg;*.jpeg;*.webp|Tous les fichiers (*.*)|*.*", "Bilder (*.png;*.jpg;*.jpeg;*.webp)|*.png;*.jpg;*.jpeg;*.webp|Alle Dateien (*.*)|*.*", "Imágenes (*.png;*.jpg;*.jpeg;*.webp)|*.png;*.jpg;*.jpeg;*.webp|Todos los archivos (*.*)|*.*");
         Add("img.chooseTitle","Choose image",        "選擇圖片",       "画像を選択",         "이미지 선택",      "Choisir une image", "Bild wählen",       "Elegir imagen");
         Add("img.loadFail",  "Could not load this image file.", "無法載入這個圖片檔。", "この画像ファイルを読み込めません。", "이 이미지 파일을 불러올 수 없습니다.", "Impossible de charger cette image.", "Diese Bilddatei konnte nicht geladen werden.", "No se pudo cargar la imagen.");
+
+        // ---- Simplified Chinese (简体中文) ----
+        Zh("app.name",   "ScreenPaste");
+
+        // Tray
+        Zh("tray.capture",   "截图");
+        Zh("tray.settings",  "设置…");
+        Zh("tray.openFolder","打开保存文件夹");
+        Zh("tray.exit",      "退出");
+        Zh("tray.about",     "关于…");
+        Zh("about.tagline",  "轻巧的 Windows 截图与标注工具。");
+        Zh("about.version",  "版本");
+        Zh("about.repo",     "项目主页");
+        Zh("about.support",  "支持作者");
+
+        // Updates
+        Zh("set.updates",    "更新");
+        Zh("set.checkStartup","启动时检查更新");
+        Zh("set.checkNow",   "立即检查更新");
+        Zh("upd.title",      "软件更新");
+        Zh("upd.available",  "有新版本 {0}（当前 {1}）。是否要更新？");
+        Zh("upd.upToDate",   "已是最新版本（{0}）。");
+        Zh("upd.failed",     "检查更新失败。");
+        Zh("upd.now",        "立即更新");
+        Zh("upd.later",      "稍后");
+        Zh("upd.openPage",   "打开页面");
+        Zh("upd.downloading","下载中…");
+        Zh("tray.tip",       "ScreenPaste — 按 {0} 截图");
+        Zh("tray.started",   "ScreenPaste 正在运行 — 按 {0} 截图");
+        Zh("msg.running",    "ScreenPaste 已经在运行中（请查看系统托盘）。");
+        Zh("msg.hotkeyFail", "截图快捷键“{0}”注册失败（无效或被占用）。仍可从系统托盘截图。");
+        Zh("msg.captureFail","截图失败：{0}");
+
+        // Recording
+        Zh("tray.record",    "区域录制");
+        Zh("tray.recordStop","停止录制");
+        Zh("rec.stop",       "停止");
+        Zh("rec.selectHint", "拖拽选取 · 点击窗口自动识别 · 滚轮调整范围 · Esc 取消");
+        Zh("rec.encoding",   "录制编码中…");
+        Zh("rec.displayChanged","显示设置已变更 — 已停止录制");
+        Zh("rec.audioUnavailable","找不到音频设备 — 将以无声录制");
+        Zh("rec.saved",      "录制已保存：{0}");
+        Zh("rec.failed",     "录制失败：{0}");
+        Zh("rec.noFfmpeg",   "找不到 ffmpeg，区域录制需要随附的 ffmpeg.exe。");
+        Zh("set.recording",  "录制");
+        Zh("set.record",     "区域录制");
+        Zh("set.recordFormat","格式");
+        Zh("set.recordFps",  "帧率");
+        Zh("set.recordAudio","声音");
+        Zh("set.recordAudioHint","声音仅存于 MP4 — GIF 与 WebP 无声。");
+        Zh("audio.none",     "无");
+        Zh("audio.system",   "系统声音");
+        Zh("audio.mic",      "麦克风");
+        Zh("audio.both",     "系统声音 + 麦克风");
+        Zh("set.recordCursor","录制鼠标指针");
+        Zh("set.skipEditor", "录完直接保存（跳过编辑器）");
+
+        // Recording editor
+        Zh("edit.title",     "编辑录制");
+        Zh("edit.hint",      "Space 播放/暂停 · ←→ 逐帧 · I/O 设置起点/终点");
+        Zh("edit.exporting", "导出中… {0}%");
+        Zh("edit.discard",   "要放弃这段录制吗？");
+
+        // Tools
+        Zh("tool.marker",    "记号笔");
+        Zh("tool.highlighter","荧光笔");
+        Zh("tool.text",      "文字");
+        Zh("tool.shape",     "形状");
+        Zh("tool.line",      "直线 / 箭头");
+        Zh("line.arrowStart","起点箭头");
+        Zh("line.arrowEnd",  "终点箭头");
+        Zh("tool.sticker",   "贴图");
+        Zh("tool.blur",      "模糊");
+        Zh("tool.magnify",   "局部放大");
+        Zh("magnify.hint",   "拖拽框出要放大的区域；选取后可以滚轮调整倍率");
+        Zh("lbl.zoom",       "倍率");
+        Zh("lbl.border",     "边框");
+        Zh("magnify.connector","连接线");
+        Zh("magnify.shadow", "阴影");
+        Zh("magnify.smooth", "平滑");
+        Zh("magnify.withAnnotations","含标注");
+
+        // Actions (hotkey appended in code)
+        Zh("action.undo",    "撤销");
+        Zh("action.redo",    "重做");
+        Zh("action.copy",    "复制");
+        Zh("action.save",    "保存");
+        Zh("action.pin",     "钉选到屏幕");
+        Zh("action.close",   "关闭");
+
+        // Option labels
+        Zh("lbl.width",      "粗细");
+        Zh("lbl.opacity",    "透明度");
+        Zh("lbl.color",      "颜色");
+        Zh("lbl.type",       "类型");
+        Zh("lbl.gaussian",   "高斯");
+        Zh("lbl.mosaic",     "马赛克");
+        Zh("lbl.blurStrength","模糊程度");
+        Zh("lbl.font",       "字体");
+        Zh("lbl.size",       "大小");
+        Zh("lbl.style",      "样式");
+        Zh("lbl.shape",      "形状");
+        Zh("shape.rect",     "方形");
+        Zh("shape.rounded",  "圆角");
+        Zh("shape.ellipse",  "圆形");
+        Zh("style.outline",  "外框");
+        Zh("style.fill",     "填充");
+        Zh("lbl.lineWidth",  "线条粗细");
+        Zh("sticker.choose", "选择图片…");
+        Zh("sticker.hint",   "  可拖拽移动、滚轮缩放");
+        Zh("color.more",     "更多颜色 / 输入 Hex");
+        Zh("color.removeHint","自定义颜色 — 右键点击移除");
+
+        // Magnifier readout
+        Zh("mag.copy",       "C 复制颜色值");
+        Zh("mag.format",     "Shift 切换 16/10 进制");
+
+        // Discard-capture confirmation
+        Zh("dlg.discardTitle","取消截图");
+        Zh("dlg.discardMsg", "要取消这次截图吗？未保存的标注将会丢失。");
+        Zh("dlg.discardYes", "放弃截图");
+        Zh("dlg.discardNo",  "继续编辑");
+        Zh("dlg.dontAsk",    "下次不再询问");
+        Zh("set.confirmDiscard","取消含标注的截图前先询问");
+
+        // Color picker
+        Zh("cp.title",       "选择颜色");
+        Zh("cp.opacity",     "透明度");
+        Zh("common.ok",      "确定");
+        Zh("common.cancel",  "取消");
+        Zh("common.save",    "保存");
+
+        // Pin window
+        Zh("pin.copy",       "复制 (Ctrl+C)");
+        Zh("pin.save",       "保存…");
+        Zh("pin.reset",      "重置缩放 (100%)");
+        Zh("pin.close",      "关闭 (Esc)");
+
+        // Settings window
+        Zh("set.title",      "ScreenPaste 设置");
+        Zh("set.hotkeys",    "快捷键");
+        Zh("set.hotkeyHint", "点选字段后直接按下想要的按键组合；Delete 可清除。");
+        Zh("set.capture",    "截图");
+        Zh("set.quickSave",  "快速保存");
+        Zh("set.appearance", "外观与启动");
+        Zh("set.language",   "语言");
+        Zh("set.theme",      "主题");
+        Zh("set.startup",    "开机时自动启动");
+        Zh("set.saveSection","保存");
+        Zh("set.saveFolder", "默认文件夹");
+        Zh("set.browse",     "浏览…");
+        Zh("theme.system",   "跟随系统");
+        Zh("theme.light",    "浅色");
+        Zh("theme.dark",     "深色");
+
+        // Misc
+        Zh("img.filter",     "图片 (*.png;*.jpg;*.jpeg;*.webp)|*.png;*.jpg;*.jpeg;*.webp|所有文件 (*.*)|*.*");
+        Zh("img.chooseTitle","选择图片");
+        Zh("img.loadFail",   "无法加载这个图片文件。");
     }
 }

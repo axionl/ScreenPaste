@@ -2,7 +2,7 @@
 
 <a href='https://ko-fi.com/M6T122R1AH' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-[繁體中文](README.md) | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | **Français** | [Deutsch](README.de.md) | [Español](README.es.md)
+[繁體中文](README.md) | [简体中文](README.zh-CN.md) | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | **Français** | [Deutsch](README.de.md) | [Español](README.es.md)
 
 # ScreenPaste
 
@@ -49,7 +49,7 @@ Après la capture, une **barre d'outils** apparaît près du curseur (déplaçab
 
 ### Divers
 - Raccourcis globaux (**F1** capture, **F2** enregistrement, tous deux configurables) et lancement depuis la **barre d'état système**
-- **Multilingue** : 繁體中文 / English / 日本語 / 한국어 / Français / Deutsch / Español (suit le système par défaut)
+- **Multilingue** : 繁體中文 / 简体中文 / English / 日本語 / 한국어 / Français / Deutsch / Español (suit le système par défaut)
 - Thème **clair / sombre / système**, interface moderne aux coins arrondis et barres de titre sombres
 - **Fenêtre de paramètres** centralisée : langue, raccourcis, thème, lancement au démarrage, dossier d'enregistrement, format / fréquence d'enregistrement (les champs de raccourci se règlent en appuyant simplement sur la combinaison)
 - **Lancement automatique au démarrage** (optionnel)
