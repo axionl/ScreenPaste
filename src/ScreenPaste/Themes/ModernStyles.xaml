@@ -1,6 +1,15 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
+    <!-- ============================================================ Default font ====
+         Microsoft YaHei (微软雅黑) as the app-wide UI font. FontFamily is an inherited
+         property, so setting it on Window reaches every child control and dialog text.
+         Views that need a fixed-width face (pixel readouts, glyph icons) still override
+         FontFamily locally. -->
+    <Style TargetType="Window">
+        <Setter Property="FontFamily" Value="Microsoft YaHei"/>
+    </Style>
+
     <!-- ============================================================ Button ====
          Rounded flat button. Background/BorderBrush are TemplateBindings so code
          that assigns them (tool highlight, colour swatches, red Stop) keeps working;

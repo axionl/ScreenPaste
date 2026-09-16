@@ -48,6 +48,7 @@ public static class FlagIcons
             switch (code)
             {
                 case "tw": DrawTw(dc); break;
+                case "cn": DrawCn(dc); break;
                 case "us": DrawUs(dc); break;
                 case "jp": DrawJp(dc); break;
                 case "kr": DrawKr(dc); break;
@@ -128,5 +129,11 @@ public static class FlagIcons
         for (int i = 0; i < 7; i++)
             Fill(dc, new Rect(0, i * H / 6.5, W, H / 13.0), red);            // red stripes
         Fill(dc, new Rect(0, 0, W * 0.42, H * 0.54), Rgb(0x3C, 0x3B, 0x6E));  // blue canton
+    }
+
+    private static void DrawCn(DrawingContext dc)
+    {
+        Fill(dc, new Rect(0, 0, W, H), Rgb(0xDE, 0x29, 0x10));                    // red field
+        Circle(dc, W * 0.2, H * 0.32, H * 0.22, Rgb(0xFF, 0xDE, 0x00));           // large yellow star (simplified)
     }
 }
