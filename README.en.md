@@ -68,7 +68,7 @@ Both are self-contained — **no separate .NET Runtime is required**, and `ffmpe
 
 ![Toolbar](screenshots/ui.png)
 
-1. Once launched it stays in the system tray; press **F1** (or double-click the tray icon) to start a capture.
+1. Once launched it stays in the system tray; press **F1** (or left-click the tray icon) to start a capture.
 2. Hover over a window or UI element to auto-outline it and click to capture, or drag to select a custom region.
 3. Pick a tool from the pop-up toolbar, adjust its parameters, and annotate on the selection.
 4. Press **Copy / Save / Pin** to output; `Esc` leaves the capture (asks first, with a don't-ask-again option).

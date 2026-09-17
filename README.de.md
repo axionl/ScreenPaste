@@ -68,7 +68,7 @@ Beide sind eigenständig — **kein separates .NET Runtime erforderlich**, und `
 
 ![Werkzeugleiste](screenshots/ui.png)
 
-1. Nach dem Start bleibt das Tool im Infobereich; **F1** (oder Doppelklick auf das Symbol) startet eine Aufnahme.
+1. Nach dem Start bleibt das Tool im Infobereich; **F1** (oder Linksklick auf das Symbol) startet eine Aufnahme.
 2. Über ein Fenster oder UI-Element fahren, um es zu umranden, und klicken — oder einen Bereich per Ziehen auswählen.
 3. Ein Werkzeug aus der Leiste wählen, Parameter anpassen und die Auswahl beschriften.
 4. **Kopieren / Speichern / Anheften** zur Ausgabe; `Esc` verlässt die Aufnahme (fragt nach — mit „Nicht mehr fragen“-Option).

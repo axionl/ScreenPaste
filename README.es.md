@@ -68,7 +68,7 @@ Ambos son autocontenidos — **no se necesita .NET Runtime aparte**, y `ffmpeg` 
 
 ![Barra de herramientas](screenshots/ui.png)
 
-1. Una vez iniciado permanece en la bandeja del sistema; pulsa **F1** (o doble clic en el icono) para capturar.
+1. Una vez iniciado permanece en la bandeja del sistema; pulsa **F1** (o clic izquierdo en el icono) para capturar.
 2. Pasa el ratón sobre una ventana o elemento de la interfaz para delinearlo y haz clic, o arrastra para seleccionar una zona.
 3. Elige una herramienta de la barra emergente, ajusta sus parámetros y anota sobre la selección.
 4. Pulsa **Copiar / Guardar / Fijar** para la salida; `Esc` sale de la captura (pregunta primero, con opción de no volver a preguntar).
