@@ -68,7 +68,7 @@ Les deux sont autonomes — **aucun .NET Runtime séparé n'est requis**, et `ff
 
 ![Barre d'outils](screenshots/ui.png)
 
-1. Une fois lancé, il reste dans la barre d'état ; appuyez sur **F1** (ou double-cliquez l'icône) pour capturer.
+1. Une fois lancé, il reste dans la barre d'état ; appuyez sur **F1** (ou cliquez l'icône avec le bouton gauche) pour capturer.
 2. Survolez une fenêtre ou un élément d'interface pour l'encadrer et cliquez, ou glissez pour sélectionner une zone.
 3. Choisissez un outil dans la barre, ajustez ses paramètres et annotez la sélection.
 4. **Copier / Enregistrer / Épingler** pour la sortie ; `Échap` quitte la capture (avec confirmation et option « ne plus demander »).

@@ -115,7 +115,11 @@ public partial class App : Application
             Icon = TrayIconFactory.Create(),
             Visible = true,
         };
-        _tray.DoubleClick += (_, _) => StartCapture();
+        // Left-click the tray icon to capture (right-click still opens the context menu).
+        _tray.MouseClick += (_, e) =>
+        {
+            if (e.Button == Forms.MouseButtons.Left) StartCapture();
+        };
         RefreshTray();
     }
 
