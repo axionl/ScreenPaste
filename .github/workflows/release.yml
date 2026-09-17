@@ -49,7 +49,8 @@ jobs:
         run: |
           choco install innosetup -y --no-progress
           $iscc = "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe"
-          & $iscc "/DMyAppVersion=$env:VERSION" installer\ScreenPaste.iss
+          # PublishDir is relative to installer\: CI publishes to the repo-root "publish".
+          & $iscc "/DMyAppVersion=$env:VERSION" "/DPublishDir=..\publish" installer\ScreenPaste.iss
           $setup = "dist\ScreenPaste-$env:VERSION-setup.exe"
           if (-not (Test-Path $setup)) { throw "Installer not found at $setup" }
           "ASSET_SETUP=$setup" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
