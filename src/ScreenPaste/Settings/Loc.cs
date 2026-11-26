@@ -595,5 +595,181 @@ public static class Loc
         Zh("img.filter",     "图片 (*.png;*.jpg;*.jpeg;*.webp)|*.png;*.jpg;*.jpeg;*.webp|所有文件 (*.*)|*.*");
         Zh("img.chooseTitle","选择图片");
         Zh("img.loadFail",   "无法加载这个图片文件。");
+
+        // ---- Keys added upstream in 1.10.0 (Snipaste shortcuts, pins, history) ----
+        // Shared / conflicts
+        Zh("action.clearAll",       "清除所有标注");
+        Zh("action.shiftQuickSave", "Shift+点击：快速保存");
+        Zh("conflict.global",       "{0} 同时设置给 {1}，只有一个会生效。");
+        Zh("conflict.globalInApp",  "{0}（{1}）是全局热键，截图与贴图中将无法使用此按键。");
+        Zh("conflict.inApp",        "{0} 同时设置给 {1}，只会执行第一个。");
+        Zh("msg.hotkeysFail",       "以下热键注册失败（无效或被其他程序占用）：{0}");
+
+        // Custom snip
+        Zh("custom.title",   "自定义截图");
+        Zh("custom.hint",    "位置与大小以屏幕像素为单位，延迟结束后开始截图。");
+        Zh("custom.left",    "左 (px)");
+        Zh("custom.top",     "上 (px)");
+        Zh("custom.width",   "宽度 (px)");
+        Zh("custom.height",  "高度 (px)");
+        Zh("custom.lastArea","上次的范围");
+        Zh("custom.invalid", "请输入整数与延迟秒数；范围至少 1 像素且须在屏幕上。");
+
+        // Detection
+        Zh("detect.window",  "窗口");
+        Zh("detect.element", "元素");
+
+        // Capture dialogs / messages
+        Zh("dlg.historyTitle",  "截图历史");
+        Zh("dlg.historyMsg",    "要舍弃标注并切换到其他截图吗？");
+        Zh("dlg.historyYes",    "舍弃标注");
+        Zh("dlg.reselectTitle", "重新选取");
+        Zh("dlg.reselectMsg",   "要舍弃标注并重新选取截图范围吗？");
+        Zh("dlg.reselectYes",   "重新选取");
+        Zh("msg.historyCleared","已清除截图历史");
+        Zh("copyFile.failed",   "无法将截图复制为文件。");
+        Zh("annot.copied",      "已复制标注");
+        Zh("size.copied",       "已复制尺寸");
+        Zh("size.copyFailed",   "无法复制尺寸");
+        Zh("mag.picked",        "Alt+C 已取色");
+
+        // Tool hints
+        Zh("tool.eraser",    "橡皮擦");
+        Zh("tool.number",    "序号标记");
+        Zh("eraser.hint",    "  拖过要擦除的笔触或标注");
+        Zh("number.hint",    "点一下放下一个序号；+ / - 调整数字");
+        Zh("number.next",    "下一个");
+        Zh("line.stripHint", "逐点点击可画折线；按右键、Enter 或双击结束");
+
+        // Output actions
+        Zh("out.copy",       "复制到剪贴板");
+        Zh("out.copyAndPin", "复制并钉选");
+        Zh("out.save",       "另存为…");
+        Zh("out.none",       "不执行动作");
+        Zh("paste.nothing",  "剪贴板中没有可以贴上的内容。");
+        Zh("print.failed",   "无法打印：{0}");
+
+        // Pin window
+        Zh("pin.paste",        "粘贴剪贴板内容");
+        Zh("pin.copyText",     "复制文本");
+        Zh("pin.copyFile",     "复制为文件");
+        Zh("pin.quickSave",    "快速保存");
+        Zh("pin.thumbnail",    "缩略图");
+        Zh("pin.print",        "打印…");
+        Zh("pin.rotateCw",     "顺时针旋转");
+        Zh("pin.rotateCcw",    "逆时针旋转");
+        Zh("pin.flipH",        "水平翻转");
+        Zh("pin.flipV",        "垂直翻转");
+        Zh("pin.grayscale",    "灰度");
+        Zh("pin.invert",       "反转颜色");
+        Zh("pin.opacityUp",    "提高不透明度");
+        Zh("pin.opacityDown",  "降低不透明度");
+        Zh("pin.destroy",      "销毁");
+        Zh("pin.dblClickClose","双击关闭");
+        Zh("pin.dblClickTitle","关闭贴图");
+        Zh("pin.dblClickMsg",  "双击贴图会将它关闭。要关闭这张贴图吗？\n\n关闭的贴图可用粘贴热键叫回。若不想双击就关闭，请在贴图的右键菜单取消勾选「双击关闭」。");
+        Zh("pin.saveFailed",   "无法保存图片：{0}");
+
+        // Tray
+        Zh("tray.paste",        "粘贴剪贴板");
+        Zh("tray.hidePins",     "隐藏／显示贴图");
+        Zh("tray.pinsClickable","让所有贴图恢复可点击");
+        Zh("tray.captureHotkey","截图快捷键（{0}）");
+        Zh("tray.customSnip",   "自定义截图…");
+        Zh("tray.tipNoHotkey",  "ScreenPaste — 双击图标截图");
+        Zh("tray.startedNoHotkey","ScreenPaste 正在运行 — 截图快捷键已关闭，双击图标即可截图");
+
+        // Settings
+        Zh("set.moreHotkeys",     "更多热键");
+        Zh("set.customSnip",      "自定义截图");
+        Zh("set.snipCopy",        "截图并复制");
+        Zh("set.snipCopyPin",     "截图、复制并钉选");
+        Zh("set.snipPin",         "截图并钉选");
+        Zh("set.fullScreenCopy",  "复制整个屏幕");
+        Zh("set.activeScreen",    "截取鼠标所在的屏幕");
+        Zh("set.activeWindow",    "截取使用中的窗口");
+        Zh("set.delayedSnip",     "延迟截图");
+        Zh("set.snipDelay",       "延迟（秒）");
+        Zh("set.lastAreaCopy",    "再次复制上次的范围");
+        Zh("set.paste",           "粘贴／叫回贴图");
+        Zh("set.hidePins",        "隐藏／显示贴图");
+        Zh("set.annotation",      "标注默认值");
+        Zh("set.blurKind",        "模糊类型");
+        Zh("set.blurKindHint",    "在截图工具栏切换后，会记住最后一次的选择");
+        Zh("set.clearSnipHistory","清除截图历史");
+        Zh("set.enterAction",     "Enter 键");
+        Zh("set.dblClickAction",  "双击");
+        Zh("set.middleClickAction","鼠标中键");
+        Zh("set.outputActions",   "Enter 与鼠标动作");
+        Zh("set.outputActionsHint","标注时在已选取范围内的动作；双击仅在未选择工具时有效。");
+        Zh("set.pins",            "贴图");
+        Zh("set.clickThrough",    "贴图鼠标穿透");
+        Zh("set.pinZoomAtCursor", "滚轮缩放以鼠标光标为中心（关闭则固定左上角）");
+        Zh("set.pinDblClick",     "双击贴图");
+        Zh("set.pinDblClickHint", "Shift+双击一律切换缩略图。关闭的贴图可用粘贴热键叫回。");
+        Zh("set.print",           "打印");
+        Zh("set.inAppShortcuts",  "截图与贴图内的快捷键");
+        Zh("set.inAppHint",       "截图与贴图时使用的每个按键都可以自定义。");
+
+        // Key bindings window
+        Zh("keys.title",          "自定义快捷键");
+        Zh("keys.edit",           "自定义按键…");
+        Zh("keys.hint",           "点选字段后按下按键或组合键；单按一下修饰键（Shift、Alt）即设定为「单按」。每个动作最多两组按键；✕ 移除，↺ 还原默认。");
+        Zh("keys.clear",          "移除这组按键");
+        Zh("keys.reset",          "还原这个动作的默认按键");
+        Zh("keys.resetAll",       "全部还原默认");
+        Zh("keys.tap",            "{0}（单按）");
+        Zh("keys.area.capture",   "截图时");
+        Zh("keys.area.pin",       "贴图上");
+        Zh("keys.group.select",   "选取范围");
+        Zh("keys.group.region",   "调整范围");
+        Zh("keys.group.tools",    "工具");
+        Zh("keys.group.annotate", "标注");
+        Zh("keys.group.loupe",    "放大镜与取色");
+        Zh("keys.group.snip",     "截图记录与画面");
+        Zh("keys.group.output",   "输出与离开");
+        Zh("keys.group.pin",      "贴图窗口");
+        Zh("keys.group.pinView",  "显示");
+        Zh("keys.group.pinLoupe", "放大镜与取色");
+        Zh("keys.group.pinOutput","复制、保存与粘贴");
+        Zh("keys.acceptDetected", "采用检测到的范围");
+        Zh("keys.detectMode",     "切换窗口／界面元素检测");
+        Zh("keys.growArea",       "范围扩大 {0}");
+        Zh("keys.shrinkArea",     "范围缩小 {0}");
+        Zh("keys.moveArea",       "移动范围或标注 {0}");
+        Zh("keys.nudgeCursor",    "光标移动 1 像素 {0}");
+        Zh("keys.holdToMove",     "拖曳时按住：移动范围");
+        Zh("keys.guideLines",     "十字辅助线");
+        Zh("keys.previousRegion", "上一次截图的范围");
+        Zh("keys.nextRegion",     "较新的截图范围");
+        Zh("keys.historyPrevious","截图记录：较旧");
+        Zh("keys.historyNext",    "截图记录：较新");
+        Zh("keys.refresh",        "重新截取画面");
+        Zh("keys.screenArea",     "当前屏幕／所有屏幕");
+        Zh("keys.toggleCursor",   "显示／隐藏截到的光标");
+        Zh("keys.toggleToolbar",  "显示／隐藏工具栏");
+        Zh("keys.previousTool",   "上一个工具");
+        Zh("keys.nextTool",       "下一个工具");
+        Zh("keys.toolVariant",    "切换工具类型");
+        Zh("keys.penThicker",     "笔画变粗／字变大");
+        Zh("keys.penThinner",     "笔画变细／字变小");
+        Zh("keys.numberUp",       "编号：下一个数字");
+        Zh("keys.numberDown",     "编号：上一个数字");
+        Zh("keys.copyAnnotation", "复制选取的标注");
+        Zh("keys.pasteAnnotation","粘贴复制的标注");
+        Zh("keys.deleteSelected", "删除选取的标注");
+        Zh("keys.copyColor",      "复制光标下的颜色");
+        Zh("keys.pickColor",      "吸取画面颜色作为笔色");
+        Zh("keys.colorFormat",    "切换色码格式（HEX／RGB／HSV）");
+        Zh("keys.copySize",       "复制范围尺寸");
+        Zh("keys.escape",         "返回／离开截图");
+        Zh("keys.enterAction",    "Enter 键动作（见设置）");
+        Zh("keys.openSettings",   "打开设置");
+        Zh("keys.movePin",        "贴图移动 1 像素 {0}");
+        Zh("keys.pinMenu",        "打开贴图菜单");
+        Zh("keys.pinLoupe",       "显示／隐藏放大镜");
+        Zh("keys.selectAllPins",  "选取所有显示中的贴图");
+        Zh("keys.zoomIn",         "放大");
+        Zh("keys.zoomOut",        "缩小");
     }
 }
