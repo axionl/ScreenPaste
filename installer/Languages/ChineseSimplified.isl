@@ -387,6 +387,31 @@ ShutdownBlockReasonUninstallingApp=正在卸载 %1。
 ; The custom messages below aren't used by Setup itself, but if you make
 ; use of them in your scripts, you'll want to translate them.
 
+
+; ---------------------------------------------------------------------------
+; Messages added after the 6.4.0 message set (Inno Setup 6.5.0 - 6.7.x).
+; Kept in [Messages] so a 6.7.x compiler does not fall back to English.
+; ---------------------------------------------------------------------------
+DownloadingLabel2=正在下载文件...
+ExtractingLabel=正在解压文件...
+ArchiveIncorrectPassword=密码不正确
+ArchiveIsCorrupted=压缩包已损坏
+ArchiveUnsupportedFormat=不支持此压缩包格式
+RetryCancelSelectAction=选择操作
+RetryCancelRetry=重试(&T)
+RetryCancelCancel=取消
+StatusDownloadFiles=正在下载文件...
+SourceVerificationFailed=源文件校验失败：%1
+VerificationSignatureDoesntExist=签名文件「%1」不存在
+VerificationSignatureInvalid=签名文件「%1」无效
+VerificationKeyNotFound=签名文件「%1」使用了未知密钥
+VerificationFileNameIncorrect=文件名不正确
+VerificationFileTagIncorrect=文件标记不正确
+VerificationFileSizeIncorrect=文件大小不正确
+VerificationFileHashIncorrect=文件哈希不正确
+ErrorDownloading=尝试下载文件时发生错误：
+ErrorExtracting=尝试解压压缩包时发生错误：
+
 [CustomMessages]
 
 NameAndVersion=%1 版本 %2

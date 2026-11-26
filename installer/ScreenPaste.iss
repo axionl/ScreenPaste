@@ -8,10 +8,12 @@
 ;   ISCC /DMyAppVersion=1.2.3 /DPublishDir=..\publish installer\ScreenPaste.iss
 ;
 ; Languages: Simplified Chinese (default) + Traditional Chinese + the app's other
-; UI languages. Chinese only became an official Inno Setup translation in 6.5.0,
-; so with an older compiler the copies in installer\Languages\ are used instead
-; (same translations, 6.4.0+ message set). Force one at run time with e.g.
-;   ScreenPaste-1.9.0-setup.exe /LANG=zh_CN
+; UI languages. The Inno Setup 6.7.x compiler does not ship Chinese .isl files of
+; its own, so the copies in installer\Languages\ are what gets compiled in; the
+; compiler:Languages\ path is still preferred should a release ever bundle them.
+; (the local copies carry the 6.4.0 message set plus the 6.7.x additions).
+; Force one at run time with e.g.
+;   ScreenPaste-1.10.0-setup.exe /LANG=zh_CN
 
 #define MyAppName "ScreenPaste"
 #define MyAppExeName "ScreenPaste.exe"

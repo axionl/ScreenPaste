@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0-windows</TargetFramework>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
     <!-- The types under test live in WindowsBase (Rect/Point/Size), so the test project
          needs the same WPF-enabled target as the app it references. -->
     <UseWPF>true</UseWPF>
